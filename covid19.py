@@ -22,14 +22,14 @@ checkbox1 = st.sidebar.checkbox('View full TH DNA sequence')
 checkbox2 = st.sidebar.checkbox('View full CH DNA sequence')
 
 if checkbox1:
-  dnaLength1 = covid_DNA_th
+    dnaLength1 = covid_DNA_th
 else:
-  dnaLength1 = dna_th_200
+    dnaLength1 = dna_th_200
 
 if checkbox2:
-  dnaLength2 = covid_DNA_ch
+    dnaLength2 = covid_DNA_ch
 else:
-  dnaLength2 = dna_ch_200
+    dnaLength2 = dna_ch_200
 
 sequence = st.text_area("SARS-CoV-2 Thailand DNA Seqeunce", dnaLength1, height=30)
 sequence = st.text_area("SARS-CoV-2 China DNA Seqeunce", dnaLength2, height=30)
@@ -46,11 +46,11 @@ nucleotides_ch={}
 
 # get nucleotides frequency
 def getNucleotides(dna, nucleotides):
-  for n in dna:
-      if n in nucleotides:
-          nucleotides[n] += 1
-      else:
-          nucleotides[n] =  1
+    for n in dna:
+        if n in nucleotides:
+            nucleotides[n] += 1
+        else:
+            nucleotides[n] =  1
 
 getNucleotides(DNA_th, nucleotides_th)
 getNucleotides(DNA_ch, nucleotides_ch)
@@ -80,9 +80,9 @@ st.write(df2)
 Thailand
 '''
 p1 = alt.Chart(df1).mark_bar().encode(
-  x=alt.X('Nucleotide', sort='ascending'),
-  y='Nucleotide Frequency',
-  tooltip=['Nucleotide','Nucleotide Frequency']
+    x=alt.X('Nucleotide', sort='ascending'),
+    y='Nucleotide Frequency',
+    tooltip=['Nucleotide','Nucleotide Frequency']
 )
 st.altair_chart(p1, use_container_width=True)
 
@@ -90,9 +90,9 @@ st.altair_chart(p1, use_container_width=True)
 China
 '''
 p2 = alt.Chart(df2).mark_bar().encode(
-  x=alt.X('Nucleotide', sort='ascending'),
-  y='Nucleotide Frequency',
-  tooltip=['Nucleotide','Nucleotide Frequency']
+    x=alt.X('Nucleotide', sort='ascending'),
+    y='Nucleotide Frequency',
+    tooltip=['Nucleotide','Nucleotide Frequency']
 )
 st.altair_chart(p2, use_container_width=True)
 
