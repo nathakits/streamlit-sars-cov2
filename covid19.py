@@ -155,14 +155,14 @@ df3 = pd.DataFrame({'amino_acids':protein_clean_th})
 df3['count'] = df3['amino_acids'].str.len()
 df3.head()
 col1.write(df3)
-col1.markdown(f'We have {len(proteins_th)} proteins with more than 50 amino acids from the Thailand covid-19 genome')
+col1.markdown(f'{len(proteins_th)} proteins with more than 50 amino acids from the Thailand covid-19 genome')
 
 protein_clean_ch = [str(i) for i in proteins_ch]
 d4 = pd.DataFrame({'amino_acids':protein_clean_ch})
 d4['count'] = d4['amino_acids'].str.len()
 d4.head()
 col2.write(d4)
-col2.markdown(f'We have {len(proteins_ch)} proteins with more than 50 amino acids from the China covid-19 genome')
+col2.markdown(f'{len(proteins_ch)} proteins with more than 50 amino acids from the China covid-19 genome')
 
 '''
 ## Comparing Thailand and China strain
