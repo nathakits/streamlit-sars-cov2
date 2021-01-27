@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-from Bio.SeqRecord import SeqRecord
 from Bio import SeqIO
 from Bio import pairwise2
 
 """
 # Covid-19 Genome analysis
 """
+
 covid19th = SeqIO.read('./data/thailand/covid19-dna-complete.fasta', "fasta")
 covid19ch = SeqIO.read('./data/china/covid19-dna-complete.fasta', "fasta")
 st.write(f'The genome of the virus causing Covid-19 TH (known as SARS-CoV-2) consists of {len(covid19th)} genetic bases or letters.')
