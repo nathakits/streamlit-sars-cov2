@@ -164,10 +164,10 @@ d4.head()
 col2.write(d4)
 col2.markdown(f'{len(proteins_ch)} proteins with more than 50 amino acids from the China covid-19 genome')
 
-'''
-## Comparing Thailand and China strain
-Using pairwise2 to compare sequence alignment in order to identify similarities.
-'''
+# '''
+# ## Comparing Thailand and China strain
+# Using pairwise2 to compare sequence alignment in order to identify similarities.
+# '''
 
-alignment_score = pairwise2.align.globalxx(covid_DNA_th, covid_DNA_ch, one_alignment_only=True, score_only=True)
-st.write('COV-TH/COV-CH Similarity (%):', alignment_score / len(covid_DNA_th) * 100)
+# alignment_score = pairwise2.align.globalxx(covid_DNA_th, covid_DNA_ch, one_alignment_only=True, score_only=True)
+# st.write('COV-TH/COV-CH Similarity (%):', alignment_score / len(covid_DNA_th) * 100)
